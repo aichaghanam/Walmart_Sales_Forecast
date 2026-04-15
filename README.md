@@ -81,21 +81,21 @@ Ce projet utilise les données historiques de **45 magasins Walmart** (2010–20
 
 | Lag | r | Décision |
 |-----|---|----------|
-| 1 | 0,325 | ✅ Retenu — meilleur prédicteur immédiat |
-| 2 | 0,212 | ✅ Retenu — signal significatif |
-| 4 | 0,174 | ✅ Retenu — signal mensuel |
-| 52 | 0,481 | ❌ Abandonné — perte 38% des données |
+| 1 | 0,325 |  Retenu — meilleur prédicteur immédiat |
+| 2 | 0,212 |  Retenu — signal significatif |
+| 4 | 0,174 |  Retenu — signal mensuel |
+| 52 | 0,481 |  Abandonné — perte 38% des données |
 
 **Analyse des fêtes**
 
 | Fête | Ventes moy/sem | IsHoliday | Décision |
 |------|---------------|-----------|----------|
-| Xmas_Week | 26 408 $ | **False** ❌ | Colonne créée |
-| Thanksgiving | 22 223 $ | True ✅ | Signal capté |
-| Black_Friday | 16 710 $ | **False** ❌ | Colonne créée |
-| SuperBowl | 16 376 $ | True ✅ | Semaine ordinaire |
-| LaborDay | 15 881 $ | True ✅ | Semaine ordinaire |
-| NewYear | 14 535 $ | True ✅ | Chute post-Noël |
+| Xmas_Week | 26 408 $ | **False**  | Colonne créée |
+| Thanksgiving | 22 223 $ | True  | Signal capté |
+| Black_Friday | 16 710 $ | **False**  | Colonne créée |
+| SuperBowl | 16 376 $ | True  | Semaine ordinaire |
+| LaborDay | 15 881 $ | True  | Semaine ordinaire |
+| NewYear | 14 535 $ | True  | Chute post-Noël |
 
 > Kaggle a encodé New Year (31 déc) comme fête alors que le vrai pic (24 déc) est invisible → 3 colonnes manuelles créées.
 
@@ -235,24 +235,6 @@ WMAE/RMSE : 0,4495
 
 ---
 
-## Installation & Utilisation
-
-```bash
-# Cloner le dépôt
-git clone <url-du-repo>
-cd walmart-sales-forecast
-
-# Créer un environnement virtuel
-python -m venv venv
-source venv/bin/activate  # Windows : venv\Scripts\activate
-
-# Installer les dépendances
-pip install pandas numpy matplotlib seaborn scikit-learn xgboost statsmodels
-
-# Lancer le notebook
-jupyter notebook Partie_1_Projet_Walmart.ipynb
-```
-
 ### Application web déployée
 
 L'application est accessible directement sans installation : [sales-prediction-app-942r.onrender.com](https://sales-prediction-app-942r.onrender.com)
@@ -283,4 +265,4 @@ Les données proviennent du challenge Kaggle [Walmart Recruiting — Store Sales
 
 
 
-Projet réalisé dans le cadre d'un cours de Machine Learning appliqué à la prévision des ventes retail.
+Projet réalisé dans le cadre d'un projet de Machine Learning appliqué à la prévision des ventes retail.
